@@ -15,8 +15,8 @@ class Solution:
         return res
     def timeRequiredToBuy2(self, tickets: List[int], k: int) -> int:
         time = 0
-        
-        for i in range(len(tickets)):
+        length = len(tickets)
+        for i in range(length):
             if i <= k:
                 time += min(tickets[k], tickets[i])
             else:
